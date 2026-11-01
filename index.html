@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Parsenjit &amp; Megha · Wedding Invitation</title>
-<meta name="description" content="Parsenjit Kumar &amp; Megha Jha invite you to their wedding on Friday, 4 December 2026 at 6:30 PM, Arista Palace, Kharar.">
+<meta name="description" content="Parsenjit Kumar &amp; Megha Jha invite you to Kirtan &amp; lunch at home on Thursday, 3 December 2026 at 11:00 AM, and to their wedding on Friday, 4 December 2026 at 6:30 PM, Arista Palace, Kharar.">
 <meta property="og:title" content="Parsenjit &amp; Megha · Shubh Vivah">
 <meta property="og:description" content="Friday, 4 December 2026 · 6:30 PM · Arista Palace, Kharar">
 <meta name="theme-color" content="#02140f">
@@ -173,6 +173,28 @@ a,button{font:inherit;color:inherit}
 @keyframes pulse{70%{box-shadow:0 0 0 14px rgba(234,211,154,0)}100%{box-shadow:0 0 0 0 rgba(234,211,154,0)}}
 
 /* ==========================================================
+   4b · MUSIC TOGGLE — appears top-right once the card is revealed
+   ========================================================== */
+.music-btn{position:fixed;top:calc(14px + env(safe-area-inset-top));right:calc(14px + env(safe-area-inset-right));z-index:970;width:48px;height:48px;display:grid;place-items:center;padding:0;border:1px solid rgba(201,162,74,.75);border-radius:50%;cursor:pointer;color:var(--gold-light);
+  background:rgba(2,20,15,.74);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  box-shadow:0 8px 22px -8px rgba(0,0,0,.6),inset 0 0 0 3px rgba(2,20,15,.6),inset 0 0 0 4px rgba(201,162,74,.22);
+  visibility:hidden;opacity:0;transform:scale(.6);transition:opacity .6s ease .9s,transform .6s var(--ease) .9s,visibility 0s linear .9s,background-color .3s}
+body.revealed .music-btn{visibility:visible;opacity:1;transform:none}
+.music-btn:hover{background:rgba(5,46,34,.92)}
+.music-btn svg{position:relative;width:22px;height:22px;overflow:visible}
+.music-btn .spk{fill:currentColor}
+.music-btn .wave,.music-btn .slash{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
+.music-btn .wave{opacity:0;transition:opacity .35s ease}
+.music-btn .slash{stroke-dasharray:8;stroke-dashoffset:0;transition:stroke-dashoffset .35s ease}
+.music-btn.is-on .wave{opacity:1;animation:wave 1.6s ease-in-out infinite}
+.music-btn.is-on .w2{animation-delay:.3s}
+.music-btn.is-on .slash{stroke-dashoffset:8}
+@keyframes wave{50%{opacity:.3}}
+.music-ring{position:absolute;inset:-5px;border-radius:50%;border:1px dashed rgba(234,211,154,.55);opacity:0;transition:opacity .4s;pointer-events:none}
+.music-btn.is-on .music-ring{opacity:1;animation:spin 14s linear infinite}
+.music-btn.is-loading .music-ring{opacity:1;border-style:solid;border-color:rgba(234,211,154,.2);border-top-color:var(--gold-light);animation:spin .9s linear infinite}
+
+/* ==========================================================
    5 · INVITATION CARD (HERO)
    ========================================================== */
 .hero{--med:clamp(150px,42vw,212px);position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:calc(104px + env(safe-area-inset-top)) 14px 40px;text-align:center;overflow:hidden;isolation:isolate;
@@ -237,6 +259,34 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
 .js .welcome-stage.done .welcome-sign{opacity:1;transform:none}
 .welcome-progress{position:absolute;left:50%;bottom:calc(30px + env(safe-area-inset-bottom));width:120px;height:1px;translate:-50% 0;background:rgba(201,162,74,.22)}
 .welcome-progress::after{content:"";position:absolute;inset:0;background:var(--gold-light);transform-origin:left;transform:scaleX(var(--p,0))}
+
+/* ==========================================================
+   6b · KIRTAN & LUNCH — the day before the wedding
+   ========================================================== */
+.kirtan{position:relative;padding:calc(96px + clamp(40px,7vw,64px)) 18px clamp(84px,12vw,124px);color:var(--ink);overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 50% 0%,#fffaf0,var(--ivory) 45%,#efe5cc)}
+.kirtan::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--lattice-ink)}
+.kirtan-deva{margin-top:6px;font-size:clamp(1.2rem,4.6vw,1.45rem);line-height:1.4;color:var(--gold-deep)}
+.kirtan-lede{max-width:34ch;margin:0 auto;font:italic 500 clamp(1.15rem,4vw,1.35rem)/1.55 var(--serif);color:var(--muted)}
+.kirtan-card{position:relative;max-width:560px;margin:46px auto 0;padding:clamp(34px,6vw,48px) clamp(18px,6vw,44px) clamp(30px,6vw,44px);text-align:center;background:var(--paper);border:1px solid rgba(143,108,36,.45);box-shadow:0 0 0 8px var(--paper),0 0 0 9px rgba(143,108,36,.25),0 40px 80px -30px rgba(5,46,34,.4)}
+.kirtan-card .corner{border-color:var(--gold-deep)}
+.kirtan-card .corner::after{background:var(--gold-deep)}
+.date-ink{margin-top:0;color:var(--gold-deep)}
+.date-ink span{border-color:rgba(143,108,36,.45)}
+.date-ink strong{color:var(--em-900)}
+.kirtan-flow{list-style:none;display:flex;align-items:flex-start;justify-content:center;gap:clamp(10px,4vw,26px);margin:30px 0 28px;padding:0}
+.kf{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:96px}
+.kf-icon{width:62px;height:62px;display:grid;place-items:center;border-radius:50%;background:radial-gradient(circle at 50% 40%,var(--em-700),var(--em-950));box-shadow:0 0 0 1px var(--gold),0 0 0 5px var(--paper),0 0 0 6px rgba(143,108,36,.4),0 10px 20px -8px rgba(5,46,34,.5)}
+.kf-icon svg{width:38px;height:38px;overflow:visible}
+.kf-icon .flame{transform:none;opacity:1;animation:flicker 1.4s ease-in-out infinite alternate}
+.kf-time{margin-top:8px;font:500 .64rem/1.5 var(--caps);letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep)}
+.kf h3{font:600 clamp(1.45rem,5vw,1.75rem)/1.15 var(--serif);color:var(--em-900)}
+.kf-link{position:relative;margin-top:31px;width:clamp(36px,12vw,90px);height:1px;background:linear-gradient(90deg,transparent,var(--gold-deep) 20%,var(--gold-deep) 80%,transparent)}
+.kf-link::after{content:"";position:absolute;left:50%;top:50%;width:7px;height:7px;translate:-50% -50%;rotate:45deg;background:var(--gold-deep)}
+.kirtan-where{padding-top:22px;border-top:1px solid rgba(143,108,36,.25)}
+.kirtan-address{max-width:24ch;margin:6px auto 0;font:500 clamp(1.25rem,4.5vw,1.5rem)/1.45 var(--serif);color:var(--ink)}
+.kirtan-actions{display:flex;flex-direction:column;gap:12px;max-width:400px;margin:26px auto 0}
+.btn-ink{background:transparent;color:var(--em-900);border-color:rgba(5,46,34,.4)}
+.btn-ink:hover{background:rgba(5,46,34,.06)}
 
 /* ==========================================================
    7 · TIMELINE — diyas light up as the gold thread reaches them
@@ -453,6 +503,21 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
   </button>
 </div>
 
+<!-- ===== Background music =====
+     No autoplay: it stays paused until the guest taps "Open Invitation".
+     The src is set from CONFIG.music.url (Dropbox links are converted to raw=1 automatically). -->
+<audio id="bg-music" loop preload="auto"></audio>
+<button type="button" class="music-btn" id="music-btn" aria-pressed="false" aria-label="Play music" title="Music">
+  <span class="music-ring" aria-hidden="true"></span>
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path class="spk" d="M3.6 9.4h3.2l4.7-3.9v13l-4.7-3.9H3.6a.8.8 0 0 1-.8-.8V10.2a.8.8 0 0 1 .8-.8z"/>
+    <path class="wave w1" d="M15.2 9.3a3.8 3.8 0 0 1 0 5.4"/>
+    <path class="wave w2" d="M17.9 6.7a7.4 7.4 0 0 1 0 10.6"/>
+    <path class="slash" d="M15.8 9.5l5 5"/>
+    <path class="slash" d="M20.8 9.5l-5 5"/>
+  </svg>
+</button>
+
 <main>
   <!-- ===== 2 · INVITATION CARD ===== -->
   <header class="hero" id="invitation">
@@ -498,7 +563,49 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
     </div>
   </section>
 
-  <!-- ===== 4 · TIMELINE ===== -->
+  <!-- ===== 4 · KIRTAN & LUNCH (the day before) ===== -->
+  <section class="kirtan" id="kirtan" aria-labelledby="kirtan-title">
+    <div class="toran" id="kirtan-toran" aria-hidden="true"></div>
+    <div class="section-head" data-observe>
+      <p class="eyebrow eyebrow-ink rv">The Day Before &nbsp;·&nbsp; <span data-bind="kirtan.weekday">Thursday</span></p>
+      <p class="kirtan-deva deva rv" style="--d:.1s">॥ कीर्तन एवं भोजन ॥</p>
+      <h2 class="section-title title-ink rv" style="--d:.2s" id="kirtan-title">Kirtan &amp; Lunch</h2>
+      <svg class="ornament ornament-ink rv" style="--d:.3s" aria-hidden="true"><use href="#flourish"/></svg>
+      <p class="kirtan-lede rv" style="--d:.4s">Before the wedding celebrations begin, we gather at home to seek blessings through Kirtan. Please join us — and stay on for lunch with the family.</p>
+    </div>
+    <article class="kirtan-card rv" data-observe>
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div class="date-block date-ink">
+        <span data-bind="kirtan.weekday">Thursday</span>
+        <strong data-bind="kirtan.dayNum">03</strong>
+        <span data-bind="kirtan.monthYear">December 2026</span>
+      </div>
+      <ol class="kirtan-flow">
+        <li class="kf"><span class="kf-icon" id="kf-kirtan"></span><p class="kf-time" data-bind="kirtan.time">11:00 AM</p><h3>Kirtan</h3></li>
+        <li class="kf-link" aria-hidden="true"></li>
+        <li class="kf">
+          <span class="kf-icon"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="url(#diya-gold)"/><circle cx="20" cy="20" r="12.6" fill="none" stroke="#fff3c9" stroke-opacity=".55" stroke-width=".8"/><g stroke="#ead39a" stroke-width=".8"><circle cx="14" cy="16" r="4.2" fill="#052e22"/><circle cx="26" cy="16" r="4.2" fill="#052e22"/><circle cx="20" cy="26.5" r="4.2" fill="#052e22"/></g><circle cx="14" cy="16" r="2.6" fill="#f2a516"/><circle cx="26" cy="16" r="2.6" fill="#b3261e"/><circle cx="20" cy="26.5" r="2.6" fill="#fff6dc"/></svg></span>
+          <p class="kf-time">Followed by</p><h3>Lunch</h3>
+        </li>
+      </ol>
+      <div class="kirtan-where">
+        <p class="eyebrow eyebrow-ink">At Our Home</p>
+        <p class="kirtan-address" data-bind="kirtan.address">535, UGF, Omaxe Ambrosia, New Chandigarh</p>
+      </div>
+      <div class="kirtan-actions">
+        <a class="btn btn-emerald" id="kirtan-route" href="https://www.google.com/maps/dir/?api=1&amp;destination=Omaxe+Ambrosia+New+Chandigarh" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>
+          Route to Our Home
+        </a>
+        <button type="button" class="btn btn-ink" id="kirtan-cal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+          Add to Calendar
+        </button>
+      </div>
+    </article>
+  </section>
+
+  <!-- ===== 5 · WEDDING TIMELINE ===== -->
   <section class="events" id="events" aria-labelledby="events-title">
     <div class="section-head" data-observe>
       <p class="eyebrow rv">Shubh Vivah &nbsp;·&nbsp; <span data-bind="dayMonth">4 December</span></p>
@@ -607,6 +714,25 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
       googlePlaceId: 'ChIJlYmqEjvwDzkRSojXYyWiRy8'   // pins the exact venue in Google Maps
     },
 
+    // The day before: Kirtan at home, followed by lunch
+    kirtan: {
+      date: '2026-12-03T11:00:00+05:30',
+      durationHours: 3,               // length of the calendar entry
+      address: '535, UGF, Omaxe Ambrosia, New Chandigarh',
+      mapQuery: 'Omaxe Ambrosia, New Chandigarh, Punjab',   // what the route button searches for
+      // For an exact route, paste your home's map pin as 'latitude,longitude' (e.g. '30.8120,76.7071').
+      // When set, it is used instead of mapQuery.
+      pin: ''
+    },
+
+    // Background music — starts the moment the guest taps "Open Invitation", loops, and can be paused
+    music: {
+      // Paste any Dropbox share link: dl=0 is swapped for raw=1 automatically so the raw audio streams
+      url: 'https://www.dropbox.com/scl/fi/9y17c4eyqfnltv8tth6dj/Chanchan-i4em6gjyyb8.mp3?rlkey=39nosd3cotxyu8vzjdgpy536a&st=c5wsjh0w&dl=0',
+      volume: 0.7,        // 0 – 1
+      fadeInMs: 2500      // gentle fade-in (iPhones ignore volume and play at full level)
+    },
+
     // Words between *asterisks* glow gold
     welcome: 'With *Lord Ganesha’s blessings* and the love of our families, we are beginning our *forever*. Your presence would make our day complete — come witness our union, share in our joy, and bless us as we take our *seven sacred vows*.',
 
@@ -640,20 +766,27 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
 
   /* ---------- Dates ---------- */
   const wedding = new Date(CONFIG.weddingDate);
+  const kirtanDate = new Date(CONFIG.kirtan.date);
   const target = wedding.getTime();
-  const fmt = (opts, locale = 'en-GB') => new Intl.DateTimeFormat(locale, { timeZone: CONFIG.timeZone, ...opts }).format(wedding);
-  const time = fmt({ hour: 'numeric', minute: '2-digit', hour12: true }, 'en-US');
+  function dateParts(date) {
+    const f = (opts, locale = 'en-GB') => new Intl.DateTimeFormat(locale, { timeZone: CONFIG.timeZone, ...opts }).format(date);
+    const time = f({ hour: 'numeric', minute: '2-digit', hour12: true }, 'en-US');
+    return {
+      weekday: f({ weekday: 'long' }),
+      dayNum: f({ day: '2-digit' }),
+      monthYear: f({ month: 'long', year: 'numeric' }),
+      dayMonth: f({ day: 'numeric', month: 'long' }),
+      time,
+      fullDate: `${f({ weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })} · ${time}`,
+      shortDate: [f({ day: '2-digit' }), f({ month: '2-digit' }), f({ year: 'numeric' })].join(' · ')
+    };
+  }
   const data = {
     ...CONFIG,
+    ...dateParts(wedding),
     groom: { ...CONFIG.groom, initial: CONFIG.groom.first.charAt(0) },
     bride: { ...CONFIG.bride, initial: CONFIG.bride.first.charAt(0) },
-    weekday: fmt({ weekday: 'long' }),
-    dayNum: fmt({ day: '2-digit' }),
-    monthYear: fmt({ month: 'long', year: 'numeric' }),
-    dayMonth: fmt({ day: 'numeric', month: 'long' }),
-    time,
-    fullDate: `${fmt({ weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })} · ${time}`,
-    shortDate: [fmt({ day: '2-digit' }), fmt({ month: '2-digit' }), fmt({ year: 'numeric' })].join(' · ')
+    kirtan: { ...CONFIG.kirtan, ...dateParts(kirtanDate) }
   };
 
   /* ---------- Fill text ---------- */
@@ -735,14 +868,14 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
     </svg>`;
   }
   // Drawn at true pixel size (no viewBox) so the garland pattern never stretches
-  (function drawToran() {
-    const host = $('#toran');
-    host.innerHTML = toranSVG();
-    const svg = host.querySelector('svg');
-    svg.insertAdjacentHTML('beforeend',
-      '<rect x="0" y="0" width="100%" height="96" fill="url(#toran-tile)"/>' +
+  function drawToran(host, sfx) {
+    host.innerHTML = toranSVG().replace(/(id="|url\(#)(mg0|mg1|leaf|toran-tile)\b/g, `$1$2-${sfx}`);
+    host.querySelector('svg').insertAdjacentHTML('beforeend',
+      `<rect x="0" y="0" width="100%" height="96" fill="url(#toran-tile-${sfx})"/>` +
       '<rect x="0" y="1" width="100%" height="4" fill="#c9a24a"/><rect x="0" y="5" width="100%" height="1" fill="#8f6c24"/>');
-  })();
+  }
+  drawToran($('#toran'), 'a');
+  drawToran($('#kirtan-toran'), 'b');
 
   /* ---------- Flower shower ---------- */
   function petalShower(count) {
@@ -768,6 +901,79 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
     setTimeout(() => layer.remove(), (end + .5) * 1000);
   }
 
+  /* ---------- Background music ---------- */
+  // Dropbox share pages (…?dl=0) aren't audio — raw=1 makes Dropbox stream the file itself
+  function directAudioURL(url) {
+    try {
+      const u = new URL(url);
+      if (/(^|\.)dropbox\.com$/i.test(u.hostname)) {
+        u.searchParams.delete('dl');
+        u.searchParams.set('raw', '1');
+      }
+      return u.toString();
+    } catch (_) { return url; }
+  }
+  const music = $('#bg-music');
+  const musicBtn = $('#music-btn');
+  let musicWanted = false;
+  let resumeOnReturn = false;
+  let fadeRaf = 0;
+  if (CONFIG.music && CONFIG.music.url) music.src = directAudioURL(CONFIG.music.url);
+  else musicBtn.remove();
+
+  function musicUI(on) {
+    musicBtn.classList.toggle('is-on', on);
+    musicBtn.setAttribute('aria-pressed', String(on));
+    musicBtn.setAttribute('aria-label', on ? 'Pause music' : 'Play music');
+  }
+  function fadeIn() {
+    cancelAnimationFrame(fadeRaf);
+    const target = clamp(Number(CONFIG.music.volume ?? .7), 0, 1);
+    const ms = Number(CONFIG.music.fadeInMs) || 0;
+    if (!ms || reduced) { music.volume = target; return; }
+    const t0 = performance.now();
+    music.volume = 0;
+    const step = now => {
+      const k = Math.min(1, (now - t0) / ms);
+      music.volume = target * k;
+      if (k < 1) fadeRaf = requestAnimationFrame(step);
+    };
+    fadeRaf = requestAnimationFrame(step);
+  }
+  function playMusic() {
+    if (!music.src) return;
+    musicWanted = true;
+    if (music.error) music.load();           // retry after a network hiccup
+    music.muted = false;
+    fadeIn();
+    musicUI(true);
+    if (music.readyState < 3) musicBtn.classList.add('is-loading');
+    const p = music.play();                  // must run inside the tap itself — that's what mobile browsers allow
+    if (p && typeof p.catch === 'function') {
+      p.catch(() => { musicWanted = false; musicBtn.classList.remove('is-loading'); musicUI(false); });
+    }
+  }
+  function pauseMusic() {
+    musicWanted = false;
+    cancelAnimationFrame(fadeRaf);
+    music.pause();
+    musicUI(false);
+  }
+  musicBtn.addEventListener('click', () => (music.paused ? playMusic() : pauseMusic()));
+  music.addEventListener('playing', () => { musicBtn.classList.remove('is-loading'); musicUI(true); });
+  music.addEventListener('waiting', () => { if (musicWanted) musicBtn.classList.add('is-loading'); });
+  music.addEventListener('pause', () => { musicBtn.classList.remove('is-loading'); if (!resumeOnReturn) musicUI(false); });
+  music.addEventListener('error', () => { if (!music.src) return; musicWanted = false; musicBtn.classList.remove('is-loading'); musicUI(false); });
+  // Pause while the guest switches apps or tabs (e.g. opening directions), resume when they return
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      if (!music.paused) { resumeOnReturn = true; music.pause(); }
+    } else if (resumeOnReturn) {
+      resumeOnReturn = false;
+      if (musicWanted) music.play().catch(() => musicUI(false));
+    }
+  });
+
   /* ---------- 1 · Envelope → Ganesha → invitation ---------- */
   const intro = $('#intro');
   const envelope = $('#envelope');
@@ -777,6 +983,7 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
   function openInvitation() {
     if (opened) return;
     opened = true;
+    playMusic();                             // same click that opens the envelope starts the music
     intro.classList.add('is-opening');
     envelope.classList.add('is-open');
     setTimeout(flyGanesha, reduced ? 300 : 2300);
@@ -857,6 +1064,7 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
     '<path d="M35.6 23.4 40 20.6l-2.6 4.8Z" fill="#c9a24a"/>' +
     '<path d="M14.5 32.2h11l-1.6 3H16.1Z" fill="#8f6c24"/>' +
     '<path d="M7.5 25.6c4 2.1 21 2.1 25 0" fill="none" stroke="#fff3c9" stroke-opacity=".5" stroke-width=".8"/></svg>';
+  $('#kf-kirtan').innerHTML = diyaSVG;
   const tl = $('#tl');
   tl.innerHTML = CONFIG.events.map(ev => `
     <li class="tl-item">
@@ -930,39 +1138,60 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
   timerId = setInterval(tick, 1000);
 
   /* ---------- 5 · Route from the guest's location + map ---------- */
+  // No origin given → Google Maps starts the route from the guest's current location
+  const routeTo = (destination, placeId) => `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}` +
+    (placeId ? `&destination_place_id=${encodeURIComponent(placeId)}` : '') + '&travelmode=driving';
   const v = CONFIG.venue;
   const dest = `${v.name}, ${v.address}`;
-  // No origin given → Google Maps starts the route from the guest's current location
-  $('#directions').href = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(dest)}` +
-    (v.googlePlaceId ? `&destination_place_id=${encodeURIComponent(v.googlePlaceId)}` : '') + '&travelmode=driving';
+  $('#directions').href = routeTo(dest, v.googlePlaceId);
+  const k = CONFIG.kirtan;
+  $('#kirtan-route').href = routeTo(k.pin ? k.pin.replace(/\s+/g, '') : k.mapQuery);
   const apple = $('#apple-maps');
   apple.href = `https://maps.apple.com/?daddr=${v.lat},${v.lng}&q=${encodeURIComponent(v.name)}&dirflg=d`;
   if (/iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent)) apple.hidden = false;
   $('#map').src = `https://maps.google.com/maps?q=${encodeURIComponent(dest)}&z=15&output=embed`;
 
   /* ---------- Calendar (.ics) ---------- */
-  $('#add-cal').addEventListener('click', () => {
-    const end = new Date(target + CONFIG.durationHours * 36e5);
+  const couple = `${CONFIG.groom.first} & ${CONFIG.bride.first}`;
+  const slug = (CONFIG.groom.first + '-' + CONFIG.bride.first).toLowerCase().replace(/[^a-z-]/g, '');
+  function downloadICS({ start, hours, summary, location, description, file }) {
+    const end = new Date(start.getTime() + hours * 36e5);
     const stamp = d => d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
     const icsEsc = s => String(s).replace(/\\/g, '\\\\').replace(/([,;])/g, '\\$1').replace(/\n/g, '\\n');
     const ics = [
       'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Wedding Invitation//EN', 'CALSCALE:GREGORIAN', 'BEGIN:VEVENT',
-      `UID:${stamp(wedding)}-${(CONFIG.groom.first + CONFIG.bride.first).replace(/\W/g, '')}@wedding-invitation`,
+      `UID:${stamp(start)}-${file.replace(/\W/g, '')}@wedding-invitation`,
       `DTSTAMP:${stamp(new Date())}`,
-      `DTSTART:${stamp(wedding)}`,
+      `DTSTART:${stamp(start)}`,
       `DTEND:${stamp(end)}`,
-      `SUMMARY:${icsEsc(`Wedding of ${CONFIG.groom.first} & ${CONFIG.bride.first}`)}`,
-      `LOCATION:${icsEsc(dest)}`,
-      `DESCRIPTION:${icsEsc(`${CONFIG.groom.full} & ${CONFIG.bride.full} invite you to witness their wedding and shower your blessings. ${data.fullDate}.`)}`,
+      `SUMMARY:${icsEsc(summary)}`,
+      `LOCATION:${icsEsc(location)}`,
+      `DESCRIPTION:${icsEsc(description)}`,
       'END:VEVENT', 'END:VCALENDAR'
     ].join('\r\n');
     const url = URL.createObjectURL(new Blob([ics], { type: 'text/calendar;charset=utf-8' }));
-    const a = Object.assign(document.createElement('a'), { href: url, download: `${CONFIG.groom.first}-${CONFIG.bride.first}-wedding.ics`.toLowerCase() });
+    const a = Object.assign(document.createElement('a'), { href: url, download: file });
     document.body.appendChild(a);
     a.click();
     a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 2000);
-  });
+  }
+  $('#add-cal').addEventListener('click', () => downloadICS({
+    start: wedding,
+    hours: CONFIG.durationHours,
+    summary: `Wedding of ${couple}`,
+    location: dest,
+    description: `${CONFIG.groom.full} & ${CONFIG.bride.full} invite you to witness their wedding and shower your blessings. ${data.fullDate}.`,
+    file: `${slug}-wedding.ics`
+  }));
+  $('#kirtan-cal').addEventListener('click', () => downloadICS({
+    start: kirtanDate,
+    hours: k.durationHours,
+    summary: `Kirtan & Lunch · ${couple}`,
+    location: k.address,
+    description: `Kirtan at ${data.kirtan.time}, followed by lunch, at our home — the day before the wedding of ${couple}.`,
+    file: `${slug}-kirtan.ics`
+  }));
 
   /* ---------- Shower your blessings ---------- */
   const notes = [
