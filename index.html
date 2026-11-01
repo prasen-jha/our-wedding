@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Parsenjit &amp; Megha · Wedding Invitation</title>
-<meta name="description" content="Parsenjit Kumar &amp; Megha Jha invite you to Kirtan &amp; lunch at home on Thursday, 3 December 2026 at 11:00 AM, and to their wedding on Friday, 4 December 2026 at 6:30 PM, Arista Palace, Kharar.">
+<meta name="description" content="Parsenjit Kumar &amp; Megha Jha invite you to Kirtan &amp; lunch at home on Thursday, 3 December 2026 from 10 AM to 1 PM, and to their wedding on Friday, 4 December 2026 at 6:30 PM, Arista Palace, Kharar.">
 <meta property="og:title" content="Parsenjit &amp; Megha · Shubh Vivah">
 <meta property="og:description" content="Friday, 4 December 2026 · 6:30 PM · Arista Palace, Kharar">
 <meta name="theme-color" content="#02140f">
@@ -55,7 +55,7 @@
 html{scroll-behavior:smooth;scrollbar-gutter:stable;-webkit-text-size-adjust:100%}
 body{margin:0;min-height:100vh;font:500 1.125rem/1.6 var(--serif);color:var(--ivory);background:var(--em-950);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body.locked{overflow:hidden;height:100vh;height:100svh}
-body::after{content:"";position:fixed;inset:0;z-index:950;pointer-events:none;background:var(--noise);opacity:.035}
+body::after{content:"";position:fixed;top:0;right:0;bottom:0;left:0;z-index:950;pointer-events:none;background:var(--noise);opacity:.035}
 h1,h2,h3,p,ol{margin:0}
 a,button{font:inherit;color:inherit}
 ::selection{background:var(--gold);color:var(--em-950)}
@@ -68,7 +68,7 @@ a,button{font:inherit;color:inherit}
    ========================================================== */
 .gold-text{display:inline-block;padding:0 .14em;background:var(--gold-grad);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:shimmer 8s linear infinite}
 @keyframes shimmer{to{background-position:200% 0}}
-@keyframes spin{to{rotate:360deg}}
+@keyframes spin{to{transform:rotate(360deg)}}
 .deva{font-family:var(--deva);font-weight:400;letter-spacing:0!important;text-transform:none!important}
 .eyebrow{font:500 .7rem/1.8 var(--caps);letter-spacing:.38em;text-transform:uppercase;color:var(--gold-light)}
 .eyebrow .deva{font-size:1.35em;vertical-align:-.06em}
@@ -108,9 +108,9 @@ a,button{font:inherit;color:inherit}
 .medallion{position:relative;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;
   background:radial-gradient(circle at 50% 38%,var(--em-700) 0%,var(--em-900) 60%,var(--em-950) 100%);
   box-shadow:0 0 0 1.5px var(--gold),0 0 0 6px var(--em-950),0 0 0 7px rgba(234,211,154,.75),0 18px 40px -12px rgba(0,0,0,.6),0 0 60px rgba(201,162,74,.22),inset 0 0 26px rgba(0,0,0,.35)}
-.medallion::after{content:"";position:absolute;inset:5.5%;border-radius:50%;border:1px dashed rgba(201,162,74,.5);pointer-events:none}
+.medallion::after{content:"";position:absolute;top:5.5%;right:5.5%;bottom:5.5%;left:5.5%;border-radius:50%;border:1px dashed rgba(201,162,74,.5);pointer-events:none}
 .medallion .ganesha{display:block;width:78%;height:auto;margin-top:-5%;filter:drop-shadow(0 4px 5px rgba(0,0,0,.45));transition:opacity .4s}
-.medallion img{position:absolute;inset:8%;width:84%;height:84%;border-radius:50%;object-fit:cover;opacity:0;transition:opacity .5s}
+.medallion img{position:absolute;top:8%;right:8%;bottom:8%;left:8%;width:84%;height:84%;border-radius:50%;object-fit:cover;opacity:0;transition:opacity .5s}
 .medallion.has-photo img{opacity:1}
 .medallion.has-photo .ganesha{opacity:0}
 .flyer{position:fixed;z-index:1100;margin:0;transform-origin:0 0;transition:transform 1.4s cubic-bezier(.65,0,.25,1),opacity .5s ease;pointer-events:none}
@@ -119,12 +119,12 @@ a,button{font:inherit;color:inherit}
 /* ==========================================================
    4 · ENVELOPE INTRO
    ========================================================== */
-.intro{position:fixed;inset:0;z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(14px,3vh,26px);padding:24px 16px;text-align:center;overflow:hidden;
+.intro{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(14px,3vh,26px);padding:24px 16px;text-align:center;overflow:hidden;
   background:radial-gradient(ellipse at 50% 50%,var(--em-700) 0%,var(--em-900) 48%,var(--em-950) 100%);
   transition:opacity 1.1s ease,visibility 0s linear 1.1s}
-.intro::before{content:"";position:absolute;inset:0;background:var(--lattice);opacity:.75;pointer-events:none}
+.intro::before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;background:var(--lattice);opacity:.75;pointer-events:none}
 .intro.is-leaving{opacity:0;visibility:hidden;pointer-events:none}
-.intro-mandala{width:min(160vw,880px);left:50%;top:52%;translate:-50% -50%;opacity:.13}
+.intro-mandala{width:min(160vw,880px);left:50%;top:52%;transform:translate(-50%,-50%);opacity:.13}
 .intro-head,.open-btn{position:relative;z-index:1;transition:opacity .6s ease,transform .6s var(--ease)}
 .intro.is-opening .intro-head,.intro.is-opening .open-btn{opacity:0;transform:translateY(-10px);pointer-events:none}
 .intro-kicker{font-size:clamp(1.15rem,4.6vw,1.45rem);line-height:1.3;color:var(--gold-light)}
@@ -135,7 +135,7 @@ a,button{font:inherit;color:inherit}
 @keyframes floaty{50%{transform:translateY(-8px)}}
 .envelope{position:relative;width:min(86vw,410px);aspect-ratio:1.5;cursor:pointer;filter:drop-shadow(0 28px 34px rgba(0,0,0,.5));transition:transform 1.1s var(--ease),opacity 1s ease}
 .intro.is-leaving .envelope{transform:translateY(40px) scale(.94);opacity:0}
-.env-back{position:absolute;inset:0;z-index:0;border-radius:6px;background:var(--lattice),linear-gradient(160deg,var(--em-800),var(--em-950));box-shadow:inset 0 0 0 1px rgba(201,162,74,.5)}
+.env-back{position:absolute;top:0;right:0;bottom:0;left:0;z-index:0;border-radius:6px;background:var(--lattice),linear-gradient(160deg,var(--em-800),var(--em-950));box-shadow:inset 0 0 0 1px rgba(201,162,74,.5)}
 .env-letter{position:absolute;left:6%;right:6%;top:4%;height:91%;z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px;padding:6% 6% 0;color:var(--ink);border-radius:3px;
   background:linear-gradient(180deg,#fffdf6,var(--ivory));
   box-shadow:inset 0 0 0 5px #fffdf6,inset 0 0 0 6px rgba(143,108,36,.5),0 10px 22px rgba(0,0,0,.25);
@@ -144,32 +144,32 @@ a,button{font:inherit;color:inherit}
 .env-letter .medallion{width:38%;flex:none}
 .letter-shri{font-size:clamp(.82rem,3.3vw,1rem);line-height:1.4;color:var(--gold-deep);margin-top:6px}
 .letter-names{font:400 clamp(1.2rem,5vw,1.6rem)/1.2 var(--script);color:var(--em-900)}
-.env-pocket-wrap{position:absolute;inset:0;z-index:3;filter:drop-shadow(0 -3px 5px rgba(0,0,0,.22));pointer-events:none}
-.env-pocket{position:absolute;inset:0;border-radius:0 0 6px 6px;background:var(--gold-metal);clip-path:polygon(0 0,50% 54%,100% 0,100% 100%,0 100%)}
-.env-pocket::after{content:"";position:absolute;inset:0;background:linear-gradient(176deg,#fdf8ec 0%,#f3e8cc 70%,#eadbb6 100%);clip-path:polygon(0 2px,50% calc(54% + 2px),100% 2px,100% 100%,0 100%)}
-.env-folds{position:absolute;inset:0;z-index:1;width:100%;height:100%}
+.env-pocket-wrap{position:absolute;top:0;right:0;bottom:0;left:0;z-index:3;filter:drop-shadow(0 -3px 5px rgba(0,0,0,.22));pointer-events:none}
+.env-pocket{position:absolute;top:0;right:0;bottom:0;left:0;border-radius:0 0 6px 6px;background:var(--gold-metal);clip-path:polygon(0 0,50% 54%,100% 0,100% 100%,0 100%)}
+.env-pocket::after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;background:linear-gradient(176deg,#fdf8ec 0%,#f3e8cc 70%,#eadbb6 100%);clip-path:polygon(0 2px,50% calc(54% + 2px),100% 2px,100% 100%,0 100%)}
+.env-folds{position:absolute;top:0;right:0;bottom:0;left:0;z-index:1;width:100%;height:100%}
 .env-to{position:absolute;left:0;right:0;bottom:10%;z-index:2;font:400 clamp(1.15rem,4.6vw,1.6rem)/1.2 var(--script);color:var(--em-800)}
 .env-flap-wrap{position:absolute;left:0;right:0;top:0;height:58%;z-index:4;filter:drop-shadow(0 4px 4px rgba(0,0,0,.25));pointer-events:none}
 .envelope.is-open .env-flap-wrap{z-index:1;transition:z-index 0s linear .45s}
 .env-flap{position:relative;width:100%;height:100%;border-radius:6px 6px 0 0;background:var(--gold-metal);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:50% 0;transform:perspective(900px) rotateX(0deg);transition:transform .9s cubic-bezier(.45,.05,.35,1)}
-.env-flap::before,.env-flap::after{content:"";position:absolute;inset:0;clip-path:polygon(2px 0,calc(100% - 2px) 0,50% calc(100% - 3px))}
+.env-flap::before,.env-flap::after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;clip-path:polygon(2px 0,calc(100% - 2px) 0,50% calc(100% - 3px))}
 .env-flap::after{background:linear-gradient(180deg,#fffaf0,#efe2c2)}
 .env-flap::before{z-index:1;background:var(--lattice),linear-gradient(var(--em-800),var(--em-950));opacity:0;transition:opacity 0s linear .42s}
 .envelope.is-open .env-flap{transform:perspective(900px) rotateX(180deg)}
 .envelope.is-open .env-flap::before{opacity:1}
-.env-seal{position:absolute;left:50%;top:58%;z-index:5;width:clamp(58px,16vw,80px);aspect-ratio:1;display:flex;align-items:center;justify-content:center;gap:1px;padding:0;border:0;border-radius:48% 52% 50% 50%/52% 48% 52% 48%;cursor:pointer;translate:-50% -50%;
+.env-seal{position:absolute;left:50%;top:58%;z-index:5;width:clamp(58px,16vw,80px);aspect-ratio:1;display:flex;align-items:center;justify-content:center;gap:1px;padding:0;border:0;border-radius:48% 52% 50% 50%/52% 48% 52% 48%;cursor:pointer;transform:translate(-50%,-50%);
   font:400 clamp(1rem,3.8vw,1.3rem)/1 var(--script);color:var(--gold-light);text-shadow:0 1px 1px rgba(0,0,0,.5);
   background:radial-gradient(circle at 34% 28%,#e0574a 0%,#a8231c 42%,#6e0f0d 100%);
   box-shadow:0 6px 14px rgba(0,0,0,.45),inset 0 -3px 6px rgba(0,0,0,.4),inset 0 2px 3px rgba(255,190,170,.45);
   transition:transform .5s var(--ease),opacity .4s ease}
-.env-seal::before{content:"";position:absolute;inset:7px;border-radius:50%;border:1px solid rgba(234,211,154,.55)}
-.env-seal::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px solid var(--gold-light);animation:ring 2.2s ease-out infinite}
+.env-seal::before{content:"";position:absolute;top:7px;right:7px;bottom:7px;left:7px;border-radius:50%;border:1px solid rgba(234,211,154,.55)}
+.env-seal::after{content:"";position:absolute;top:-6px;right:-6px;bottom:-6px;left:-6px;border-radius:50%;border:1px solid var(--gold-light);animation:ring 2.2s ease-out infinite}
 .env-seal i{font-style:normal;font-size:.7em;color:var(--gold)}
 @keyframes ring{0%{transform:scale(.9);opacity:.85}100%{transform:scale(1.55);opacity:0}}
-.env-seal:hover{transform:scale(1.07)}
-.envelope.is-open .env-seal{transform:scale(.2) rotate(-30deg);opacity:0;pointer-events:none}
+.env-seal:hover{transform:translate(-50%,-50%) scale(1.07)}
+.envelope.is-open .env-seal{transform:translate(-50%,-50%) scale(.2) rotate(-30deg);opacity:0;pointer-events:none}
 .open-btn{margin-top:clamp(6px,2vh,16px)}
-.open-btn::before{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:0 0 0 0 rgba(234,211,154,.55);animation:pulse 2.4s ease-out infinite}
+.open-btn::before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;border-radius:inherit;box-shadow:0 0 0 0 rgba(234,211,154,.55);animation:pulse 2.4s ease-out infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 14px rgba(234,211,154,0)}100%{box-shadow:0 0 0 0 rgba(234,211,154,0)}}
 
 /* ==========================================================
@@ -190,8 +190,12 @@ body.revealed .music-btn{visibility:visible;opacity:1;transform:none}
 .music-btn.is-on .w2{animation-delay:.3s}
 .music-btn.is-on .slash{stroke-dashoffset:8}
 @keyframes wave{50%{opacity:.3}}
-.music-ring{position:absolute;inset:-5px;border-radius:50%;border:1px dashed rgba(234,211,154,.55);opacity:0;transition:opacity .4s;pointer-events:none}
+.music-ring{position:absolute;top:-5px;right:-5px;bottom:-5px;left:-5px;border-radius:50%;border:1px dashed rgba(234,211,154,.55);opacity:0;transition:opacity .4s;pointer-events:none}
 .music-btn.is-on .music-ring{opacity:1;animation:spin 14s linear infinite}
+.music-hint{position:absolute;right:calc(100% + 10px);top:50%;white-space:nowrap;padding:8px 12px;border-radius:999px;background:rgba(2,20,15,.85);border:1px solid rgba(201,162,74,.55);font:600 .58rem/1 var(--caps);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-pale);opacity:0;pointer-events:none;-webkit-transform:translate(8px,-50%);transform:translate(8px,-50%);transition:opacity .4s ease,transform .4s var(--ease)}
+.music-btn.needs-tap .music-hint{opacity:1;pointer-events:auto;-webkit-transform:translate(0,-50%);transform:translate(0,-50%)}
+.music-btn.needs-tap{animation:nudge 1.8s ease-in-out infinite}
+@keyframes nudge{50%{box-shadow:0 0 0 9px rgba(234,211,154,.16),0 8px 22px -8px rgba(0,0,0,.6),inset 0 0 0 3px rgba(2,20,15,.6),inset 0 0 0 4px rgba(201,162,74,.22)}}
 .music-btn.is-loading .music-ring{opacity:1;border-style:solid;border-color:rgba(234,211,154,.2);border-top-color:var(--gold-light);animation:spin .9s linear infinite}
 
 /* ==========================================================
@@ -199,18 +203,18 @@ body.revealed .music-btn{visibility:visible;opacity:1;transform:none}
    ========================================================== */
 .hero{--med:clamp(150px,42vw,212px);position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:calc(104px + env(safe-area-inset-top)) 14px 40px;text-align:center;overflow:hidden;isolation:isolate;
   background:radial-gradient(ellipse at 50% 24%,var(--em-700) 0%,var(--em-900) 46%,var(--em-950) 100%)}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--lattice);opacity:.6;-webkit-mask:radial-gradient(ellipse at 50% 40%,transparent 25%,#000 78%);mask:radial-gradient(ellipse at 50% 40%,transparent 25%,#000 78%)}
+.hero::before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;z-index:-1;background:var(--lattice);opacity:.6;-webkit-mask:radial-gradient(ellipse at 50% 40%,transparent 25%,#000 78%);mask:radial-gradient(ellipse at 50% 40%,transparent 25%,#000 78%)}
 .toran{position:absolute;left:0;right:0;top:0;z-index:3;height:96px;pointer-events:none;transform:translateY(-105%);transition:transform 1.4s var(--ease) .2s}
 .toran svg{display:block;width:100%;height:100%;transform-origin:50% 0;animation:sway 6s ease-in-out infinite alternate}
 body.revealed .toran{transform:none}
 @keyframes sway{from{transform:skewX(-1.3deg)}to{transform:skewX(1.3deg)}}
 .inv-card{position:relative;isolation:isolate;width:min(100%,580px);margin-top:calc(var(--med) / 2);padding:calc(var(--med) / 2 + 22px) clamp(14px,5vw,48px) clamp(36px,7vw,56px);border:1px solid rgba(201,162,74,.6);background:linear-gradient(180deg,rgba(2,20,15,.28),rgba(2,20,15,.6));box-shadow:0 40px 90px -30px rgba(0,0,0,.65)}
-.inv-card::before{content:"";position:absolute;inset:8px;border:1px solid rgba(201,162,74,.2);pointer-events:none}
-.med-wrap{position:absolute;left:50%;top:0;width:var(--med);aspect-ratio:1;translate:-50% -50%}
+.inv-card::before{content:"";position:absolute;top:8px;right:8px;bottom:8px;left:8px;border:1px solid rgba(201,162,74,.2);pointer-events:none}
+.med-wrap{position:absolute;left:50%;top:0;width:var(--med);height:var(--med);transform:translate(-50%,-50%)}
 .med-wrap .medallion{width:100%;opacity:0}
 .med-wrap .medallion.is-here{opacity:1}
-.hero-mandala{z-index:-1;width:330%;left:50%;top:50%;translate:-50% -50%;opacity:.09}
-.halo{position:absolute;z-index:-1;inset:-42%;border-radius:50%;background:repeating-conic-gradient(from 0deg,rgba(234,211,154,.26) 0deg 1deg,transparent 1deg 6deg);-webkit-mask:radial-gradient(circle,#000 28%,transparent 68%);mask:radial-gradient(circle,#000 28%,transparent 68%);opacity:0;transition:opacity 1.8s ease .2s;animation:spin 90s linear infinite}
+.hero-mandala{z-index:-1;width:330%;left:50%;top:50%;transform:translate(-50%,-50%);opacity:.09}
+.halo{position:absolute;z-index:-1;top:-42%;right:-42%;bottom:-42%;left:-42%;border-radius:50%;background:repeating-conic-gradient(from 0deg,rgba(234,211,154,.26) 0deg 1deg,transparent 1deg 6deg);-webkit-mask:radial-gradient(circle,#000 28%,transparent 68%);mask:radial-gradient(circle,#000 28%,transparent 68%);opacity:0;transition:opacity 1.8s ease .2s;animation:spin 90s linear infinite}
 .is-landed .halo{opacity:1}
 .shri{font-size:clamp(1.3rem,5vw,1.6rem);line-height:1.4;color:var(--gold-light)}
 .verse{margin-top:8px;font-size:clamp(.92rem,3.5vw,1.08rem);line-height:1.75;color:rgba(248,243,230,.72)}
@@ -242,11 +246,11 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
 .js .welcome-track{height:250vh}
 .welcome-stage{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(16px,3vh,26px);padding:90px 22px;overflow:hidden;isolation:isolate;text-align:center}
 .js .welcome-stage{position:sticky;top:0;height:100vh;height:100svh;min-height:0}
-.welcome-bg{position:absolute;inset:-6%;z-index:-2;
+.welcome-bg{position:absolute;top:-6%;right:-6%;bottom:-6%;left:-6%;z-index:-2;
   background:linear-gradient(180deg,rgba(2,20,15,.93) 0%,rgba(2,20,15,.8) 50%,rgba(2,20,15,.95) 100%),var(--floral-img) center/cover no-repeat,radial-gradient(ellipse at 50% 40%,var(--em-800),var(--em-950) 75%);
   filter:saturate(.85);transform:scale(calc(1.14 - var(--p,0) * .14))}
-.welcome-stage::before{content:"";position:absolute;inset:-10%;z-index:-1;background:var(--noise);opacity:.07;animation:grain 1s steps(5) infinite;pointer-events:none}
-.welcome-stage::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at center,transparent 45%,rgba(0,0,0,.72) 100%);pointer-events:none}
+.welcome-stage::before{content:"";position:absolute;top:-10%;right:-10%;bottom:-10%;left:-10%;z-index:-1;background:var(--noise);opacity:.07;animation:grain 1s steps(5) infinite;pointer-events:none}
+.welcome-stage::after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;z-index:-1;background:radial-gradient(ellipse at center,transparent 45%,rgba(0,0,0,.72) 100%);pointer-events:none}
 @keyframes grain{0%,100%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,3%)}80%{transform:translate(3%,1%)}}
 .welcome-text{max-width:24ch;font:500 clamp(1.45rem,min(6vw,3.9vh),2.5rem)/1.5 var(--serif);color:var(--ivory)}
 .welcome-text .w{transition:opacity .45s ease,color .45s ease,text-shadow .6s ease}
@@ -257,14 +261,14 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
 .welcome-sign{font:400 clamp(2rem,8vw,3rem)/1.2 var(--script);transition:opacity 1s ease,transform 1s var(--ease)}
 .js .welcome-sign{opacity:0;transform:translateY(12px)}
 .js .welcome-stage.done .welcome-sign{opacity:1;transform:none}
-.welcome-progress{position:absolute;left:50%;bottom:calc(30px + env(safe-area-inset-bottom));width:120px;height:1px;translate:-50% 0;background:rgba(201,162,74,.22)}
-.welcome-progress::after{content:"";position:absolute;inset:0;background:var(--gold-light);transform-origin:left;transform:scaleX(var(--p,0))}
+.welcome-progress{position:absolute;left:50%;bottom:calc(30px + env(safe-area-inset-bottom));width:120px;height:1px;transform:translateX(-50%);background:rgba(201,162,74,.22)}
+.welcome-progress::after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;background:var(--gold-light);transform-origin:left;transform:scaleX(var(--p,0))}
 
 /* ==========================================================
    6b · KIRTAN & LUNCH — the day before the wedding
    ========================================================== */
 .kirtan{position:relative;padding:calc(96px + clamp(40px,7vw,64px)) 18px clamp(84px,12vw,124px);color:var(--ink);overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 50% 0%,#fffaf0,var(--ivory) 45%,#efe5cc)}
-.kirtan::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--lattice-ink)}
+.kirtan::before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;z-index:-1;background:var(--lattice-ink)}
 .kirtan-deva{margin-top:6px;font-size:clamp(1.2rem,4.6vw,1.45rem);line-height:1.4;color:var(--gold-deep)}
 .kirtan-lede{max-width:34ch;margin:0 auto;font:italic 500 clamp(1.15rem,4vw,1.35rem)/1.55 var(--serif);color:var(--muted)}
 .kirtan-card{position:relative;max-width:560px;margin:46px auto 0;padding:clamp(34px,6vw,48px) clamp(18px,6vw,44px) clamp(30px,6vw,44px);text-align:center;background:var(--paper);border:1px solid rgba(143,108,36,.45);box-shadow:0 0 0 8px var(--paper),0 0 0 9px rgba(143,108,36,.25),0 40px 80px -30px rgba(5,46,34,.4)}
@@ -281,7 +285,7 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
 .kf-time{margin-top:8px;font:500 .64rem/1.5 var(--caps);letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep)}
 .kf h3{font:600 clamp(1.45rem,5vw,1.75rem)/1.15 var(--serif);color:var(--em-900)}
 .kf-link{position:relative;margin-top:31px;width:clamp(36px,12vw,90px);height:1px;background:linear-gradient(90deg,transparent,var(--gold-deep) 20%,var(--gold-deep) 80%,transparent)}
-.kf-link::after{content:"";position:absolute;left:50%;top:50%;width:7px;height:7px;translate:-50% -50%;rotate:45deg;background:var(--gold-deep)}
+.kf-link::after{content:"";position:absolute;left:50%;top:50%;width:7px;height:7px;transform:translate(-50%,-50%) rotate(45deg);background:var(--gold-deep)}
 .kirtan-where{padding-top:22px;border-top:1px solid rgba(143,108,36,.25)}
 .kirtan-address{max-width:24ch;margin:6px auto 0;font:500 clamp(1.25rem,4.5vw,1.5rem)/1.45 var(--serif);color:var(--ink)}
 .kirtan-actions{display:flex;flex-direction:column;gap:12px;max-width:400px;margin:26px auto 0}
@@ -292,10 +296,10 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
    7 · TIMELINE — diyas light up as the gold thread reaches them
    ========================================================== */
 .events{position:relative;padding:clamp(84px,12vw,124px) 18px;overflow:hidden;isolation:isolate;background:linear-gradient(180deg,var(--em-950) 0%,var(--em-900) 100%)}
-.events::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--lattice);opacity:.55}
+.events::before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;z-index:-1;background:var(--lattice);opacity:.55}
 .tl-wrap{position:relative;max-width:780px;margin:52px auto 0}
 .tl-track{position:absolute;top:8px;bottom:8px;left:27px;width:2px;background:rgba(201,162,74,.16)}
-.tl-fill{position:absolute;inset:0;background:linear-gradient(180deg,var(--gold-light),var(--gold) 60%,var(--gold-deep));transform-origin:top;transform:scaleY(var(--fill,0));box-shadow:0 0 12px rgba(234,211,154,.5)}
+.tl-fill{position:absolute;top:0;right:0;bottom:0;left:0;background:linear-gradient(180deg,var(--gold-light),var(--gold) 60%,var(--gold-deep));transform-origin:top;transform:scaleY(var(--fill,0));box-shadow:0 0 12px rgba(234,211,154,.5)}
 .tl{list-style:none;padding:0}
 .tl-item{position:relative;padding:0 0 40px 76px}
 .tl-item:last-child{padding-bottom:0}
@@ -317,15 +321,15 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
    ========================================================== */
 .countdown{position:relative;padding:clamp(84px,12vw,124px) 14px;text-align:center;overflow:hidden;isolation:isolate;
   background:radial-gradient(ellipse at 50% 0%,rgba(23,105,79,.5),transparent 60%),linear-gradient(180deg,rgba(2,20,15,.9),rgba(5,46,34,.9)),var(--lights-img) center/cover no-repeat,var(--em-900)}
-.countdown::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--lattice);opacity:.6}
-.countdown::after{content:"";position:absolute;inset:-20%;z-index:-1;pointer-events:none;
+.countdown::before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;z-index:-1;background:var(--lattice);opacity:.6}
+.countdown::after{content:"";position:absolute;top:-20%;right:-20%;bottom:-20%;left:-20%;z-index:-1;pointer-events:none;
   background:radial-gradient(circle at 12% 28%,rgba(234,211,154,.22) 0 3px,transparent 4px),radial-gradient(circle at 82% 18%,rgba(234,211,154,.18) 0 5px,transparent 6px),radial-gradient(circle at 68% 76%,rgba(234,211,154,.16) 0 4px,transparent 5px),radial-gradient(circle at 26% 82%,rgba(234,211,154,.2) 0 2px,transparent 3px),radial-gradient(circle at 50% 50%,rgba(234,211,154,.14) 0 6px,transparent 7px);
   filter:blur(1.5px);animation:drift 26s ease-in-out infinite alternate}
 @keyframes drift{to{transform:translate(4%,-6%)}}
 .arches{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(8px,2.6vw,22px);max-width:660px;margin:46px auto 24px}
 .arch{position:relative;aspect-ratio:3/4.2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding-top:22%;border:1px solid rgba(201,162,74,.6);border-radius:999px 999px 6px 6px;background:linear-gradient(180deg,rgba(248,243,230,.09),rgba(248,243,230,.02));-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:inset 0 0 30px rgba(201,162,74,.07)}
-.arch::before{content:"";position:absolute;inset:5px;border:1px solid rgba(201,162,74,.22);border-radius:inherit;pointer-events:none}
-.arch::after{content:"";position:absolute;left:50%;top:-5px;width:9px;height:9px;translate:-50% 0;rotate:45deg;background:var(--gold)}
+.arch::before{content:"";position:absolute;top:5px;right:5px;bottom:5px;left:5px;border:1px solid rgba(201,162,74,.22);border-radius:inherit;pointer-events:none}
+.arch::after{content:"";position:absolute;left:50%;top:-5px;width:9px;height:9px;transform:translateX(-50%) rotate(45deg);background:var(--gold)}
 .num{display:block;font:500 clamp(1.9rem,8.6vw,3.8rem)/1 var(--serif);font-variant-numeric:lining-nums tabular-nums;color:var(--gold-pale)}
 .num.tick{animation:tick .55s var(--ease)}
 @keyframes tick{from{opacity:0;transform:translateY(-35%);filter:blur(3px)}to{opacity:1;transform:none;filter:none}}
@@ -337,12 +341,25 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
    9 · VENUE + ROUTE
    ========================================================== */
 .venue-sec{position:relative;padding:clamp(84px,12vw,124px) 18px;color:var(--ink);overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 50% 0%,#fffaf0,var(--ivory) 45%,#efe5cc)}
-.venue-sec::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--lattice-ink)}
+.venue-sec::before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;z-index:-1;background:var(--lattice-ink)}
 .venue-grid{display:grid;gap:44px;max-width:980px;margin:0 auto;align-items:center}
-.map-arch{position:relative;width:min(100%,430px);margin:0 auto;aspect-ratio:4/5;border-radius:999px 999px 10px 10px;overflow:hidden;border:1px solid var(--gold-deep);background:var(--lattice),radial-gradient(circle at 50% 40%,var(--em-700),var(--em-950));box-shadow:0 0 0 8px var(--paper),0 0 0 9px rgba(143,108,36,.35),0 34px 70px -30px rgba(5,46,34,.55)}
-.map-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--gold-light);font:italic 500 1.2rem/1.3 var(--serif)}
-.map-fallback svg{width:44px;height:44px;color:var(--gold)}
-.map-arch iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.85) contrast(1.03)}
+/* Map: a plain rectangle (no curved crop) with a fixed height every phone understands */
+.map-wrap{width:100%;max-width:460px;margin:0 auto;text-align:center}
+.map-shell{position:relative;border-radius:12px;box-shadow:0 0 0 1px var(--gold-deep),0 0 0 7px var(--paper),0 0 0 8px rgba(143,108,36,.35),0 34px 70px -30px rgba(5,46,34,.55)}
+.map-shell .corner{border-color:var(--gold-deep);z-index:2}
+.map-shell .corner::after{background:var(--gold-deep)}
+.map-frame{position:relative;height:300px;height:clamp(280px,78vw,420px);border-radius:12px;overflow:hidden;background:var(--em-900);-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-mask-image:-webkit-radial-gradient(white,black)}
+.map-fallback{position:absolute;top:0;right:0;bottom:0;left:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--gold-light);font:italic 500 1.25rem/1.3 var(--serif)}
+.map-art{position:absolute;top:0;left:0;width:100%;height:100%}
+.map-pin{position:relative;width:46px;height:46px;margin-bottom:8px;color:var(--gold);filter:drop-shadow(0 6px 8px rgba(0,0,0,.45));animation:bob 2.4s ease-in-out infinite}
+.map-pin::after{content:"";position:absolute;left:50%;bottom:-6px;width:18px;height:6px;margin-left:-9px;border-radius:50%;background:rgba(0,0,0,.35)}
+@keyframes bob{50%{-webkit-transform:translateY(-5px);transform:translateY(-5px)}}
+.map-label{position:relative;padding:4px 14px;border-radius:999px;background:rgba(2,20,15,.6)}
+.map-loading{position:relative;margin-top:8px;font:500 .6rem/1.4 var(--caps);font-style:normal;letter-spacing:.28em;text-transform:uppercase;color:rgba(234,211,154,.7)}
+.map-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;opacity:0;transition:opacity .6s ease}
+.map-frame.loaded iframe{opacity:1}
+.map-open{display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:6px 2px;border-bottom:1px solid rgba(143,108,36,.5);font:600 .66rem/1.4 var(--caps);letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);text-decoration:none}
+.map-open svg{width:14px;height:14px}
 .venue-info{text-align:center}
 .eyebrow-ink{color:var(--gold-deep)}
 .title-ink{color:var(--em-900)}
@@ -357,8 +374,8 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
    10 · FOOTER + BLESSINGS
    ========================================================== */
 .footer{position:relative;padding:86px 20px calc(60px + env(safe-area-inset-bottom));text-align:center;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 50% 100%,var(--em-800),var(--em-950) 70%)}
-.footer::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--lattice);opacity:.45}
-.footer-mandala{z-index:-1;width:min(140vw,760px);left:50%;bottom:-40%;translate:-50% 0;opacity:.08}
+.footer::before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;z-index:-1;background:var(--lattice);opacity:.45}
+.footer-mandala{z-index:-1;width:min(140vw,760px);left:50%;bottom:-40%;transform:translateX(-50%);opacity:.08}
 .footer-shubh{font-size:clamp(1.3rem,5vw,1.6rem);color:var(--gold-light)}
 .footer-names{margin-top:6px;font:400 clamp(2.6rem,10vw,3.6rem)/1.2 var(--script)}
 .footer-date{margin-top:8px;font:500 .72rem/1.6 var(--caps);letter-spacing:.38em;color:var(--gold-light)}
@@ -367,7 +384,7 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
 .footer-note{margin-top:18px;font-size:1rem;color:rgba(248,243,230,.55)}
 
 /* Flower shower */
-.petals{position:fixed;inset:0;z-index:990;pointer-events:none;overflow:hidden}
+.petals{position:fixed;top:0;right:0;bottom:0;left:0;z-index:990;pointer-events:none;overflow:hidden}
 .petals i{position:absolute;top:-28px;animation:pfall var(--dur) linear var(--delay) forwards}
 .petals b{display:block;width:100%;height:100%;animation:psway calc(var(--dur) / 2.6) ease-in-out var(--delay) infinite alternate}
 .petals .marigold b{border-radius:50% 50% 46% 46%/62% 62% 38% 38%;background:radial-gradient(circle at 45% 35%,#ffe9a3 0%,#ffc21a 38%,#f08c00 74%,#c45f00 100%);box-shadow:0 0 6px rgba(242,159,5,.35)}
@@ -398,6 +415,17 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
   .arches{gap:6px}
   .lbl{letter-spacing:.1em}
   .btn{letter-spacing:.16em;padding:15px 20px}
+}
+/* Older phones (iOS 14 and earlier) can't size boxes from aspect-ratio — give them real heights */
+@supports not (aspect-ratio: 1 / 1){
+  .envelope{height:calc(min(86vw,410px) / 1.5)}
+  .env-letter .medallion{height:calc(min(86vw,410px) * .76 * .38)}
+  .env-seal{height:clamp(58px,16vw,80px)}
+  .med-wrap .medallion{height:100%}
+  .arch{height:clamp(118px,31vw,212px)}
+  .intro-mandala{height:min(160vw,880px)}
+  .hero-mandala{height:calc(var(--med) * 3.3)}
+  .footer-mandala{height:min(140vw,760px)}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -509,6 +537,7 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
 <audio id="bg-music" loop preload="auto"></audio>
 <button type="button" class="music-btn" id="music-btn" aria-pressed="false" aria-label="Play music" title="Music">
   <span class="music-ring" aria-hidden="true"></span>
+  <span class="music-hint" aria-hidden="true">Tap for music</span>
   <svg viewBox="0 0 24 24" aria-hidden="true">
     <path class="spk" d="M3.6 9.4h3.2l4.7-3.9v13l-4.7-3.9H3.6a.8.8 0 0 1-.8-.8V10.2a.8.8 0 0 1 .8-.8z"/>
     <path class="wave w1" d="M15.2 9.3a3.8 3.8 0 0 1 0 5.4"/>
@@ -581,7 +610,7 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
         <span data-bind="kirtan.monthYear">December 2026</span>
       </div>
       <ol class="kirtan-flow">
-        <li class="kf"><span class="kf-icon" id="kf-kirtan"></span><p class="kf-time" data-bind="kirtan.time">11:00 AM</p><h3>Kirtan</h3></li>
+        <li class="kf"><span class="kf-icon" id="kf-kirtan"></span><p class="kf-time" data-bind="kirtan.timeRange">10 AM – 1 PM</p><h3>Kirtan</h3></li>
         <li class="kf-link" aria-hidden="true"></li>
         <li class="kf">
           <span class="kf-icon"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="url(#diya-gold)"/><circle cx="20" cy="20" r="12.6" fill="none" stroke="#fff3c9" stroke-opacity=".55" stroke-width=".8"/><g stroke="#ead39a" stroke-width=".8"><circle cx="14" cy="16" r="4.2" fill="#052e22"/><circle cx="26" cy="16" r="4.2" fill="#052e22"/><circle cx="20" cy="26.5" r="4.2" fill="#052e22"/></g><circle cx="14" cy="16" r="2.6" fill="#f2a516"/><circle cx="26" cy="16" r="2.6" fill="#b3261e"/><circle cx="20" cy="26.5" r="2.6" fill="#fff6dc"/></svg></span>
@@ -649,12 +678,32 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
   <!-- ===== 6 · VENUE + ROUTE ===== -->
   <section class="venue-sec" id="venue" aria-labelledby="venue-title">
     <div class="venue-grid">
-      <div class="map-arch rv" data-observe>
-        <div class="map-fallback" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-          <span data-bind="venue.name">Arista Palace</span>
+      <div class="map-wrap rv" data-observe>
+        <div class="map-shell">
+          <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+          <div class="map-frame" id="map-frame">
+            <!-- Drawn placeholder: always visible, covered by the live map once it loads -->
+            <div class="map-fallback" aria-hidden="true">
+              <svg class="map-art" viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice">
+                <rect width="400" height="320" fill="#052e22"/>
+                <g fill="#0a3f2f"><rect x="20" y="24" width="96" height="70" rx="6"/><rect x="138" y="24" width="120" height="52" rx="6"/><rect x="282" y="18" width="104" height="92" rx="6"/><rect x="18" y="122" width="70" height="88" rx="6"/><rect x="290" y="140" width="96" height="66" rx="6"/><rect x="22" y="238" width="120" height="66" rx="6"/><rect x="250" y="232" width="132" height="76" rx="6"/></g>
+                <path d="M-10 108 C80 100 150 118 210 104 S330 86 410 120" fill="none" stroke="#c9a24a" stroke-opacity=".55" stroke-width="7"/>
+                <path d="M120 -10 C126 70 112 150 132 220 S170 300 160 330" fill="none" stroke="#c9a24a" stroke-opacity=".4" stroke-width="5"/>
+                <path d="M-10 222 C90 214 180 232 270 220 S360 200 410 214" fill="none" stroke="#c9a24a" stroke-opacity=".3" stroke-width="4"/>
+                <path d="M270 -10 C262 60 280 140 268 330" fill="none" stroke="#c9a24a" stroke-opacity=".25" stroke-width="3"/>
+                <path d="M200 120 C230 150 300 140 330 170" fill="none" stroke="#c9a24a" stroke-opacity=".22" stroke-width="2" stroke-dasharray="4 5"/>
+              </svg>
+              <svg class="map-pin" viewBox="0 0 24 24"><path d="M12 22s-7.5-6.6-7.5-12.3a7.5 7.5 0 0 1 15 0C19.5 15.4 12 22 12 22z" fill="currentColor"/><circle cx="12" cy="9.7" r="2.7" fill="#052e22"/></svg>
+              <span class="map-label" data-bind="venue.name">Arista Palace</span>
+              <span class="map-loading">Loading map…</span>
+            </div>
+            <iframe id="map" title="Map showing the wedding venue" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
         </div>
-        <iframe id="map" title="Map showing the wedding venue" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <a class="map-open" id="map-open" href="https://www.google.com/maps/search/?api=1&amp;query=Arista+Palace+Kharar" target="_blank" rel="noopener">
+          Open in Google Maps
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+        </a>
       </div>
       <div class="venue-info" data-observe>
         <p class="eyebrow eyebrow-ink rv">The Venue</p>
@@ -711,13 +760,14 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
       address: 'Village Jandpur, New Sunny Enclave, PR-7 Road, Sector 123, Kharar, Punjab 140301',
       lat: 30.7690074,
       lng: 76.6716601,
-      googlePlaceId: 'ChIJlYmqEjvwDzkRSojXYyWiRy8'   // pins the exact venue in Google Maps
+      googlePlaceId: 'ChIJlYmqEjvwDzkRSojXYyWiRy8',  // pins the exact venue in Google Maps
+      mapQuery: 'Arista Palace, Sector 123, Kharar, Punjab 140301'   // what the embedded map shows
     },
 
     // The day before: Kirtan at home, followed by lunch
     kirtan: {
-      date: '2026-12-03T11:00:00+05:30',
-      durationHours: 3,               // length of the calendar entry
+      date: '2026-12-03T10:00:00+05:30',   // Kirtan starts
+      durationHours: 3,               // Kirtan runs 10 AM – 1 PM (also the calendar entry length)
       address: '535, UGF, Omaxe Ambrosia, New Chandigarh',
       mapQuery: 'Omaxe Ambrosia, New Chandigarh, Punjab',   // what the route button searches for
       // For an exact route, paste your home's map pin as 'latitude,longitude' (e.g. '30.8120,76.7071').
@@ -727,8 +777,13 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
 
     // Background music — starts the moment the guest taps "Open Invitation", loops, and can be paused
     music: {
-      // Paste any Dropbox share link: dl=0 is swapped for raw=1 automatically so the raw audio streams
-      url: 'https://www.dropbox.com/scl/fi/9y17c4eyqfnltv8tth6dj/Chanchan-i4em6gjyyb8.mp3?rlkey=39nosd3cotxyu8vzjdgpy536a&st=c5wsjh0w&dl=0',
+      // Tried in this order until one plays.
+      // Most reliable on every phone: upload the song as "music.mp3" into the same folder as index.html.
+      // Dropbox share links are converted automatically (dl=0 → raw=1, plus Dropbox's direct file server).
+      files: [
+        'music.mp3',
+        'https://www.dropbox.com/scl/fi/9y17c4eyqfnltv8tth6dj/Chanchan-i4em6gjyyb8.mp3?rlkey=39nosd3cotxyu8vzjdgpy536a&st=c5wsjh0w&dl=0'
+      ],
       volume: 0.7,        // 0 – 1
       fadeInMs: 2500      // gentle fade-in (iPhones ignore volume and play at full level)
     },
@@ -781,12 +836,16 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
       shortDate: [f({ day: '2-digit' }), f({ month: '2-digit' }), f({ year: 'numeric' })].join(' · ')
     };
   }
+  function timeRange(start, hours) {
+    const t = d => new Intl.DateTimeFormat('en-US', { timeZone: CONFIG.timeZone, hour: 'numeric', minute: '2-digit', hour12: true }).format(d).replace(':00', '');
+    return `${t(start)} – ${t(new Date(start.getTime() + hours * 36e5))}`;
+  }
   const data = {
     ...CONFIG,
     ...dateParts(wedding),
     groom: { ...CONFIG.groom, initial: CONFIG.groom.first.charAt(0) },
     bride: { ...CONFIG.bride, initial: CONFIG.bride.first.charAt(0) },
-    kirtan: { ...CONFIG.kirtan, ...dateParts(kirtanDate) }
+    kirtan: { ...CONFIG.kirtan, ...dateParts(kirtanDate), timeRange: timeRange(kirtanDate, CONFIG.kirtan.durationHours) }
   };
 
   /* ---------- Fill text ---------- */
@@ -902,75 +961,144 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
   }
 
   /* ---------- Background music ---------- */
-  // Dropbox share pages (…?dl=0) aren't audio — raw=1 makes Dropbox stream the file itself
-  function directAudioURL(url) {
-    try {
-      const u = new URL(url);
-      if (/(^|\.)dropbox\.com$/i.test(u.hostname)) {
-        u.searchParams.delete('dl');
-        u.searchParams.set('raw', '1');
-      }
-      return u.toString();
-    } catch (_) { return url; }
+  // Every way of fetching the song, in order. A Dropbox share page (…dl=0) is a web page, not audio:
+  // raw=1 makes Dropbox stream the file itself (iPhones refuse dl=1), and the direct file server is a backup.
+  function audioCandidates(list) {
+    const out = [];
+    [].concat(list || []).forEach(src => {
+      if (!src) return;
+      try {
+        const u = new URL(src, location.href);
+        if (/(^|\.)dropbox\.com$/i.test(u.hostname)) {
+          const raw = new URL(u.href);
+          raw.searchParams.delete('dl');
+          raw.searchParams.set('raw', '1');
+          out.push(raw.href);
+          const direct = new URL(u.pathname, 'https://dl.dropboxusercontent.com');
+          if (u.searchParams.get('rlkey')) direct.searchParams.set('rlkey', u.searchParams.get('rlkey'));
+          direct.searchParams.set('raw', '1');
+          out.push(direct.href);
+        } else {
+          out.push(u.href);
+        }
+      } catch (_) { out.push(src); }
+    });
+    return out.filter((x, i, a) => a.indexOf(x) === i);
   }
+
   const music = $('#bg-music');
   const musicBtn = $('#music-btn');
-  let musicWanted = false;
+  const musicCfg = CONFIG.music || {};
+  const tracks = audioCandidates(musicCfg.files || musicCfg.url);
+  let musicWanted = false;     // the guest wants music on
+  let userPaused = false;      // the guest pressed pause themselves
+  let allFailed = false;       // every source failed to load
   let resumeOnReturn = false;
+  let retries = 0;
   let fadeRaf = 0;
-  if (CONFIG.music && CONFIG.music.url) music.src = directAudioURL(CONFIG.music.url);
-  else musicBtn.remove();
+
+  // <source> list: if one fails (missing file, blocked network, unsupported format) the phone tries the next
+  if (tracks.length) {
+    tracks.forEach((src, i) => {
+      const el = document.createElement('source');
+      el.src = src;
+      if (i === tracks.length - 1) el.addEventListener('error', () => { allFailed = true; if (musicWanted) { musicWanted = false; musicStopped(); } });
+      music.appendChild(el);
+    });
+  } else {
+    musicBtn.remove();
+  }
 
   function musicUI(on) {
     musicBtn.classList.toggle('is-on', on);
     musicBtn.setAttribute('aria-pressed', String(on));
     musicBtn.setAttribute('aria-label', on ? 'Pause music' : 'Play music');
   }
+  function showHint(show) { musicBtn.classList.toggle('needs-tap', show); }
+  // Music didn't start (phone blocked it or the file didn't load): show the hint, and retry on the next tap
+  function musicStopped() {
+    musicBtn.classList.remove('is-loading');
+    musicUI(false);
+    if (opened && !userPaused) { showHint(true); armRetry(); }
+  }
+  // Volume must stay within 0–1 or the browser throws and the song is stuck silent
+  function setVolume(v) { try { music.volume = clamp(Number(v) || 0, 0, 1); } catch (_) { /* iPhones: volume is fixed */ } }
   function fadeIn() {
     cancelAnimationFrame(fadeRaf);
-    const target = clamp(Number(CONFIG.music.volume ?? .7), 0, 1);
-    const ms = Number(CONFIG.music.fadeInMs) || 0;
-    if (!ms || reduced) { music.volume = target; return; }
-    const t0 = performance.now();
-    music.volume = 0;
-    const step = now => {
-      const k = Math.min(1, (now - t0) / ms);
-      music.volume = target * k;
+    const target = clamp(Number(musicCfg.volume == null ? .7 : musicCfg.volume), 0, 1);
+    const ms = Number(musicCfg.fadeInMs) || 0;
+    if (!ms || reduced) { setVolume(target); return; }
+    const t0 = Date.now();
+    setVolume(0);
+    const step = () => {
+      const k = clamp((Date.now() - t0) / ms, 0, 1);
+      setVolume(target * k);
       if (k < 1) fadeRaf = requestAnimationFrame(step);
     };
     fadeRaf = requestAnimationFrame(step);
+    // Safety net: if animation frames are throttled (background tab, battery saver), still reach full volume
+    setTimeout(() => { if (musicWanted) setVolume(target); }, ms + 600);
   }
   function playMusic() {
-    if (!music.src) return;
+    if (!tracks.length) return;
     musicWanted = true;
-    if (music.error) music.load();           // retry after a network hiccup
+    userPaused = false;
+    showHint(false);
+    if (allFailed) { allFailed = false; music.load(); }   // try the whole list again
     music.muted = false;
     fadeIn();
     musicUI(true);
     if (music.readyState < 3) musicBtn.classList.add('is-loading');
-    const p = music.play();                  // must run inside the tap itself — that's what mobile browsers allow
-    if (p && typeof p.catch === 'function') {
-      p.catch(() => { musicWanted = false; musicBtn.classList.remove('is-loading'); musicUI(false); });
+    let p = null;
+    try { p = music.play(); } catch (_) { p = null; }   // runs inside the tap itself — what phones require
+    if (p && typeof p.then === 'function') {
+      p.then(disarmRetry, () => { if (musicWanted && !userPaused) { musicWanted = false; musicStopped(); } });
     }
   }
   function pauseMusic() {
     musicWanted = false;
+    userPaused = true;
     cancelAnimationFrame(fadeRaf);
     music.pause();
+    showHint(false);
+    disarmRetry();
     musicUI(false);
   }
+  function onAnyTap(e) {
+    if (e.target && e.target.closest && e.target.closest('#music-btn')) return;
+    disarmRetry();
+    if (!userPaused && music.paused && retries < 3) { retries++; playMusic(); }
+  }
+  function armRetry() {
+    document.addEventListener('touchend', onAnyTap, true);
+    document.addEventListener('click', onAnyTap, true);
+  }
+  function disarmRetry() {
+    document.removeEventListener('touchend', onAnyTap, true);
+    document.removeEventListener('click', onAnyTap, true);
+  }
+
   musicBtn.addEventListener('click', () => (music.paused ? playMusic() : pauseMusic()));
-  music.addEventListener('playing', () => { musicBtn.classList.remove('is-loading'); musicUI(true); });
+  music.addEventListener('playing', () => { musicBtn.classList.remove('is-loading'); showHint(false); musicUI(true); retries = 0; });
   music.addEventListener('waiting', () => { if (musicWanted) musicBtn.classList.add('is-loading'); });
   music.addEventListener('pause', () => { musicBtn.classList.remove('is-loading'); if (!resumeOnReturn) musicUI(false); });
-  music.addEventListener('error', () => { if (!music.src) return; musicWanted = false; musicBtn.classList.remove('is-loading'); musicUI(false); });
+  // Some phones stop a streamed track at the end even with loop on — start it again
+  music.addEventListener('ended', () => {
+    if (!musicWanted) return;
+    music.currentTime = 0;
+    const p = music.play();
+    if (p && p.catch) p.catch(() => {});
+  });
   // Pause while the guest switches apps or tabs (e.g. opening directions), resume when they return
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
       if (!music.paused) { resumeOnReturn = true; music.pause(); }
     } else if (resumeOnReturn) {
       resumeOnReturn = false;
-      if (musicWanted) music.play().catch(() => musicUI(false));
+      if (musicWanted) {
+        const p = music.play();
+        if (p && p.catch) p.catch(() => { musicWanted = false; musicStopped(); });
+      }
     }
   });
 
@@ -999,7 +1127,7 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
     flyer.removeAttribute('id');
     flyer.classList.add('flyer');
     flyer.setAttribute('aria-hidden', 'true');
-    Object.assign(flyer.style, { left: `${a.left}px`, top: `${a.top}px`, width: `${a.width}px` });
+    Object.assign(flyer.style, { left: `${a.left}px`, top: `${a.top}px`, width: `${a.width}px`, height: `${a.height}px` });
     document.body.appendChild(flyer);
     src.style.visibility = 'hidden';
     flyer.getBoundingClientRect();
@@ -1149,7 +1277,12 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
   const apple = $('#apple-maps');
   apple.href = `https://maps.apple.com/?daddr=${v.lat},${v.lng}&q=${encodeURIComponent(v.name)}&dirflg=d`;
   if (/iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent)) apple.hidden = false;
-  $('#map').src = `https://maps.google.com/maps?q=${encodeURIComponent(dest)}&z=15&output=embed`;
+  // Live map: venue name first so Google pins the palace itself; iwloc= hides the info bubble on small screens
+  const mapEl = $('#map');
+  mapEl.addEventListener('load', () => $('#map-frame').classList.add('loaded'));
+  mapEl.src = `https://maps.google.com/maps?q=${encodeURIComponent(v.mapQuery || dest)}&t=m&z=15&ie=UTF8&iwloc=&output=embed`;
+  $('#map-open').href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${v.name}, ${v.town}`)}` +
+    (v.googlePlaceId ? `&query_place_id=${encodeURIComponent(v.googlePlaceId)}` : '');
 
   /* ---------- Calendar (.ics) ---------- */
   const couple = `${CONFIG.groom.first} & ${CONFIG.bride.first}`;
@@ -1189,7 +1322,7 @@ body.revealed .write{animation:write 1.9s cubic-bezier(.5,0,.3,1) forwards,shimm
     hours: k.durationHours,
     summary: `Kirtan & Lunch · ${couple}`,
     location: k.address,
-    description: `Kirtan at ${data.kirtan.time}, followed by lunch, at our home — the day before the wedding of ${couple}.`,
+    description: `Kirtan from ${data.kirtan.timeRange}, followed by lunch, at our home — the day before the wedding of ${couple}.`,
     file: `${slug}-kirtan.ics`
   }));
 
